@@ -1,0 +1,57 @@
+{
+    "disable_dm": {
+        "description": "是否禁用私聊消息",
+        "type": "bool",
+        "default": true
+    },
+    "allowed_groups": {
+        "description": "允许访问机器人的群 ID 列表。为空表示不限制群聊。",
+        "type": "list",
+        "default": []
+    },
+    "blocked_users": {
+        "description": "用户黑名单。命中后优先拦截。",
+        "type": "list",
+        "default": []
+    },
+    "allowed_users": {
+        "description": "用户白名单。非空时仅允许名单内用户。",
+        "type": "list",
+        "default": []
+    },
+    "reply_on_block": {
+        "description": "命中拦截规则时是否返回提示文本",
+        "type": "bool",
+        "default": false
+    },
+    "allow_acl_command_bypass": {
+        "description": "是否允许 /acl 管理命令绕过 ACL 拦截（建议开启）",
+        "type": "bool",
+        "default": true
+    },
+    "reply_text_blocked_user": {
+        "description": "用户被黑名单拦截时的提示语",
+        "type": "string",
+        "default": "你已被列入黑名单，无法使用机器人。"
+    },
+    "reply_text_not_in_allowed_users": {
+        "description": "用户不在白名单时的提示语",
+        "type": "string",
+        "default": "你不在允许使用机器人的用户列表中。"
+    },
+    "reply_text_private_message_disabled": {
+        "description": "私聊被禁用时的提示语",
+        "type": "string",
+        "default": "当前不接受私聊，请在指定群聊中使用。"
+    },
+    "reply_text_group_not_allowed": {
+        "description": "群聊不在白名单时的提示语",
+        "type": "string",
+        "default": "当前群聊未被允许访问机器人。"
+    },
+    "enable_debug_log": {
+        "description": "是否输出调试日志（会打印更多允许/阻断细节）",
+        "type": "bool",
+        "default": false
+    }
+}
